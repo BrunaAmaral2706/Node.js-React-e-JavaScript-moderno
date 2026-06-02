@@ -466,11 +466,7 @@ button {
 .transactions-table td.col-merchant,
 .transactions-table td.col-category,
 .transactions-table td.col-owner {
-  white-space: normal; /* permitir quebra natural se necessário */
-}
-  width: 80px;
-  max-width: 80px;
-  white-space: nowrap;
+  white-space: normal;
 }
 .transactions-table th.col-date,
 .transactions-table td.col-date {
