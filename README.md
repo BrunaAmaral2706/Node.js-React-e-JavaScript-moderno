@@ -2,15 +2,43 @@
 
 ## Sobre o Projeto
 
-O Fraud Analytics Dashboard é uma plataforma desenvolvida para análise e monitoramento de fraudes financeiras por meio de indicadores operacionais, visualizações interativas e métricas de Machine Learning.
+O Fraud Analytics Dashboard é uma plataforma desenvolvida para análise e monitoramento de fraudes financeiras utilizando conceitos de Data Analytics, Data Engineering e Visualização de Dados.
 
-O projeto foi construído utilizando React e JavaScript para analisar mais de 1,2 milhão de transações financeiras, permitindo identificar padrões de fraude, monitorar riscos e apoiar a tomada de decisão baseada em dados.
+O projeto analisa mais de 1,2 milhão de transações financeiras para identificar padrões de fraude, gerar indicadores estratégicos e apoiar a tomada de decisão através de dashboards interativos.
+
+## O Problema
+
+Fraudes financeiras representam bilhões de reais em perdas todos os anos para instituições financeiras, fintechs e empresas de meios de pagamento.
+
+A identificação rápida de comportamentos suspeitos é fundamental para reduzir prejuízos financeiros, proteger clientes e melhorar a eficiência operacional.
+
+Este projeto foi desenvolvido para simular um ambiente corporativo de monitoramento de fraude, permitindo a análise de mais de 1,2 milhão de transações financeiras através de indicadores estratégicos, métricas de Machine Learning e visualizações interativas.
+
+
+---
+
+## Dashboard Online
+
+Acesse a aplicação:
+
+https://node-js-react-e-java-script-moderno-eight.vercel.app
+
+## Impacto Gerado
+
+* 1.296.675 transações analisadas
+* 7.506 fraudes identificadas
+* Taxa de fraude de 0,58%
+* Aproximadamente R$ 3,99 milhões em perdas identificadas
+* Identificação de padrões relevantes para monitoramento preventivo
+
 
 ---
 
 ## Dashboard
 
-A plataforma é composta por quatro módulos principais:
+A plataforma possui quatro módulos principais:
+
+Simulação de monitoramento de transações financeiras para detecção de fraudes utilizando Data Analytics, Machine Learning e Arquitetura Medallion.
 
 ### Dashboard Executivo
 
@@ -48,9 +76,9 @@ A plataforma é composta por quatro módulos principais:
 * Monitorar transações financeiras
 * Identificar padrões de fraude
 * Analisar categorias de risco
-* Visualizar KPIs operacionais
+* Construir KPIs de negócio
 * Demonstrar conceitos de Fraud Analytics
-* Simular um ambiente corporativo de monitoramento em tempo real
+* Simular monitoramento em tempo real
 
 ---
 
@@ -71,6 +99,55 @@ Dataset de transações financeiras contendo:
 
 ---
 
+## Arquitetura da Solução
+
+O projeto foi desenvolvido seguindo conceitos de Data Engineering e arquitetura Medallion.
+
+Fluxo de processamento:
+
+```text
+Dataset de Transações
+        ↓
+Python + Pandas (Google Colab)
+        ↓
+Bronze Layer
+(Dados Brutos)
+        ↓
+Silver Layer
+(Dados Tratados)
+        ↓
+Gold Layer
+(KPIs e Métricas)
+        ↓
+Dashboard React
+        ↓
+Monitoramento de Fraudes
+```
+
+### Processamentos Realizados
+
+#### Bronze Layer
+
+* Ingestão dos dados
+* Validação da estrutura
+* Preservação dos dados originais
+
+#### Silver Layer
+
+* Tratamento de valores nulos
+* Limpeza dos dados
+* Padronização de campos
+* Conversão de tipos
+
+#### Gold Layer
+
+* Construção dos KPIs
+* Indicadores de fraude
+* Métricas de negócio
+* Dados preparados para visualização
+
+---
+
 ## KPIs Desenvolvidos
 
 * Valor Total Transacionado
@@ -78,6 +155,7 @@ Dataset de transações financeiras contendo:
 * Total de Fraudes
 * Taxa de Fraude
 * Valor Total Fraudado
+* Ticket Médio
 * Top Categorias Fraudadas
 * Top Merchants Fraudados
 * Alertas Operacionais
@@ -85,33 +163,15 @@ Dataset de transações financeiras contendo:
 
 ---
 
-## Arquitetura da Solução
-
-Fluxo da aplicação:
-
-Dataset de Transações
-↓
-Tratamento e Exploração dos Dados
-↓
-Cálculo de KPIs
-↓
-Visualizações Interativas
-↓
-Monitoramento de Fraudes
-↓
-Suporte à Tomada de Decisão
-
-### Componentes
-
-* Camada de Dados
-* Camada Analítica
-* Camada de Visualização
-* Camada de Monitoramento
-* Camada de Machine Learning
-
----
-
 ## Tecnologias Utilizadas
+
+### Engenharia e Análise de Dados
+
+* Python
+* Pandas
+* Google Colab
+* ETL
+* Arquitetura Bronze / Silver / Gold
 
 ### Frontend
 
@@ -126,21 +186,7 @@ Suporte à Tomada de Decisão
 
 * Git
 * GitHub
-
----
-
-## Estrutura do Projeto
-
-```text
-frontend/
-├── src/
-├── components/
-├── pages/
-├── assets/
-├── App.jsx
-├── main.jsx
-└── App.css
-```
+* Vercel
 
 ---
 
@@ -151,14 +197,14 @@ frontend/
 * KPIs Executivos
 * Gráficos Interativos
 * Ranking de Merchants
-* Indicadores de Performance
+* Indicadores Financeiros
 
 ### Fraudes
 
 * Distribuição de Fraudes
-* Principais Categorias de Risco
-* Análise Operacional
-* Indicadores de Exposição
+* Categorias de Risco
+* Top Merchants Fraudados
+* Indicadores Operacionais
 
 ### Machine Learning
 
@@ -171,38 +217,10 @@ frontend/
 
 ### Alertas
 
-* Gestão de Alertas
+* Alertas Críticos
 * Níveis de Severidade
-* Responsáveis
-* Status Operacional
-
----
-
-## Como Executar
-
-### Clonar o Repositório
-
-```bash
-git clone URL_DO_REPOSITORIO
-```
-
-### Acessar o Projeto
-
-```bash
-cd frontend
-```
-
-### Instalar Dependências
-
-```bash
-npm install
-```
-
-### Executar Aplicação
-
-```bash
-npm run dev
-```
+* Gestão Operacional
+* Monitoramento de Eventos
 
 ---
 
@@ -217,14 +235,13 @@ npm run dev
 
 ## Principais Insights
 
-A análise dos dados permitiu identificar:
+A análise permitiu identificar:
 
-* 7.506 transações fraudulentas
-* Taxa de fraude de 0,58%
-* Aproximadamente R$ 3,99 milhões em perdas financeiras
 * Concentração de fraudes em categorias específicas
+* Merchants com maior incidência de eventos suspeitos
 * Padrões relevantes para monitoramento preventivo
-* Indicadores úteis para suporte à tomada de decisão
+* Indicadores para suporte à tomada de decisão
+* Métricas para acompanhamento de risco operacional
 
 ---
 
@@ -232,29 +249,18 @@ A análise dos dados permitiu identificar:
 
 * Fraud Analytics
 * Data Analytics
-* Data Visualization
-* Dashboard Development
-* React
-* JavaScript
+* Data Engineering
+* ETL
+* Python
+* Pandas
 * KPI Design
 * Business Intelligence
-* ETL Concepts
+* Data Visualization
+* React
+* JavaScript
 * Machine Learning Metrics
 * Git & GitHub
 * Data Storytelling
-
----
-
-## Melhorias Futuras
-
-* Integração com API FastAPI
-* Banco de Dados PostgreSQL
-* Pipeline de Dados
-* Atualização em Tempo Real
-* Deploy em Produção
-* Modelo Preditivo de Fraude
-* Integração com Cloud Platform
-* Monitoramento Automatizado
 
 ---
 
@@ -266,19 +272,6 @@ A análise dos dados permitiu identificar:
 
 Profissional com experiência em prevenção à fraude, análise de dados, operações e automação de processos.
 
-### Competências
-
-* Fraud Analytics
-* Data Analytics
-* Data Engineering
-* Python
-* SQL
-* Power BI
-* ETL e Tratamento de Dados
-* Automação de Processos
-* Indicadores e KPIs
-* Visualização de Dados
-
 ### LinkedIn
 
 https://www.linkedin.com/in/brunasantosamaral
@@ -287,3 +280,6 @@ https://www.linkedin.com/in/brunasantosamaral
 
 https://github.com/BrunaAmaral2706
 
+### Projeto
+
+https://node-js-react-e-java-script-moderno-eight.vercel.app
