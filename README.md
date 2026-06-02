@@ -278,7 +278,7 @@ https://www.linkedin.com/in/brunasantosamaral
 
 ### GitHub
 
-https://github.com/BrunaAmaral2706
+https://github.com/BrunaAmaral2706/Node.js-React-e-JavaScript-moderno
 
 ### Projeto
 
